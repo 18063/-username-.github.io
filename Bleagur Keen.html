@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+
+<style>
+    body { 
+ font-family: serif;
+        text-align: center;}
+    header {
+        letter-spacing: 1px;
+        background: limegreen;
+        padding 20px;
+        color: snow
+    }
+    h2 {
+     width: 100%;
+    font-size: 2em; 
+        
+        
+    }
+    section {
+    padding: 30px;
+    margin-bottom 40px;
+        
+        
+    }
+   
+    .card {
+     border: 8px solid cornflowerblue;
+        background-color: powderblue;
+            margin: 25px;
+            padding: 25;
+        box-shadow: 8px 8px 20px green;
+    }
+    td {
+    padding: 10px
+    }
+    table {
+    margin: auto;
+    }
+    #my-order {
+    background-color:chartreuse;
+        padding: 25px;
+    display: none;
+    }
+</style>
+
+
+</head>
+<body>
+
+<header>
+ 
+    <h1>
+ 
+Bleagur Keen
+    
+    </h1>   
+  <h4>
+    
+ Where your hunger bar can be filled   
+    
+</h4>  
+ 
+
+    
+    
+ </header> 
+ <section>
+ <h2>
+     Sul Sul   
+    
+    
+    
+</h2>
+    
+ <p>
+ My aspiration in life is to be a a Master chef in Bleagurs and Grilled cheese.   
+ </p>  
+<p>
+  About us: I am a foodie, outgoing and goofball sim and I built this restarunt by using the motherlode cheat and downlaoding a restraunt off the gallery... Yes I do plagerism.
+</p>  
+    
+</section>   
+
+   
+    <section class="card">
+     
+     <img src="Images/Bella_Goth_of_Willow_Creek%20.jpg(1).png">    
+     <h3> Bella Goth </h3>
+    <p> Jnr Manager- helps make sure the restraunt is running smoothly. </p>
+    <button> Contact </button>
+</section>
+<section class="card">
+    
+  <img src="Images/Bob_Pancakes_headshot.png">
+    <h3> Bob Pancakes </h3>
+    <p>Chef-Helps make the best grilled cheese, pancakes and bleagurs around.</p>
+    <button> Contact </button>
+    
+    
+    </section>
+  <section class="card">
+    
+  <img src="Images/nancy_Landgraab.png">
+      <h3>Nancy Landgraab</h3>
+      <p>Greeter-Helps make sure only the best of the best comes into our restraunt.</p>
+      <button> Contact </button>
+    
+    </section>       
+    
+   <section>
+    <h2>My Order Form</h2>
+     <table> 
+    <tr>
+    <td> Name: </td> 
+    <td> <input type="text" size="25"
+    name="my-name"> </td>
+    </tr>
+    <tr>
+     <td> Age:</td>
+    <td> 
+    <input type="number" name="my-age"
+    value="1" min="1" max="100">
+    </td>
+    <tr>
+     <td> Favorite meal:</td> 
+    <td>
+    <select name="my-favorite-meal">
+    <option>Bleagur</option>    
+    <option>Grilled Cheese</option>
+    <option>Pancakes</option>    
+    </select>        
+    </td>
+    </tr>
+    <tr>
+      <br>    
+    </tr>
+    <tr>
+    <td colspan="2">
+     <input class="button"
+     type="button"
+     value="Process order"
+    onclick="Processed();">
+    <input class="button"
+    type="reset" 
+    value="Clear">
+    </td>
+    </tr>
+       </table>  
+    </section> 
+    <form id="my-form">
+    <h1>Foody Form:</h1>
+    What is the craziest meal you made?
+    <br>
+    <input type="text" size="50">
+        <br><br>
+        <button>Sumbit</button>
+        <table>
+    <td></td>
+        </table>
+        <br>
+        <div id="my-order">
+        </div>
+    </form>
+    
+  <script>
+ function Processed () {
+ results = "<h3>Success!</h3> Thanks.";
+results += "<br>Name:" + orderForm.elements["my-name"].value;
+results += "<br>I like to order: " + orderForm.elements["my-food"].value;
+     results += "<br>Quantity: " + orderForm.elements["my-qty"].value;
+var= orderResults = document.getElementById("my-order");
+orderResults.style.display = "block";
+orderResults.innerHTML = results;
+ } 
+    
+</script>  
+    
+</body>
